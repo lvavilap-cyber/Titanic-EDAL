@@ -1,0 +1,17 @@
+# Select two records
+record1 = df.loc[0, ['Sex', 'Embarked']]
+record2 = df.loc[1, ['Sex', 'Embarked']]
+
+print("Record 1:")
+print(record1)
+
+print("\nRecord 2:")
+print(record2)
+
+# Count mismatches
+mismatches = sum(record1 != record2)
+
+# Dissimilarity
+dissimilarity = mismatches / len(record1)
+
+print("\nNominal Dissimilarity =", dissimilarity)
