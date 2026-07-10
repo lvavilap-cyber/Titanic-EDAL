@@ -1,0 +1,16 @@
+from scipy.spatial.distance import euclidean
+
+# Select two records
+point1 = df.loc[0, ['Age', 'Fare']].fillna(0)
+point2 = df.loc[1, ['Age', 'Fare']].fillna(0)
+
+print("Point 1:")
+print(point1)
+
+print("\nPoint 2:")
+print(point2)
+
+# Euclidean distance
+distance = euclidean(point1, point2)
+
+print("\nNumeric Dissimilarity (Euclidean Distance):", distance)
